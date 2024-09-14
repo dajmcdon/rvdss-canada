@@ -203,8 +203,8 @@ base_url = "https://health-infobase.canada.ca/src/data/respiratory-virus-detecti
 weekly_data = get_weekly_data(base_url,2024).set_index(['epiweek', 'time_value', 'issue', 'geo_type', 'geo_value'])
 positive_data = get_revised_data(base_url)
 
-path1 = './season_2024_2025/respiratory_detections.csv'
-path2 = './season_2024_2025/positive_tests.csv'
+path1 = './data/season_2024_2025/respiratory_detections.csv'
+path2 = './data/season_2024_2025/positive_tests.csv'
 
 if os.path.exists(path1)==False:
     weekly_data.to_csv(path1,index=True)
@@ -221,5 +221,3 @@ else:
     if positive_data.index.isin(old_positive_data.index).any() == False:
         old_positive_data= pd.concat([old_positive_data,positive_data],axis=0)
         old_positive_data.to_csv(path2,index=True)
-    
-   
