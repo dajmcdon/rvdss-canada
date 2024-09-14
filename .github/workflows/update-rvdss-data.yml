@@ -9,8 +9,6 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v4
-        with:
-          ref: dev
       - name: Set up Python 3.8
         uses: actions/setup-python@v2
         with:
