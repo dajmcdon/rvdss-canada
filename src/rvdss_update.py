@@ -164,7 +164,7 @@ def get_weekly_data(base_url,start_year):
     week_string = week_df.iloc[0]['Text'].lower()
     current_week = int(re.search("week (.+?) ", week_string).group(1))
 
-    if current_week < 34:
+    if current_week < 35:
         current_year = start_year+1
     else:
         current_year = start_year
