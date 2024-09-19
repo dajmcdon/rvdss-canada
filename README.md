@@ -8,6 +8,30 @@ The data was historically reported in weekly reports, but have moved to an inter
 
 For convenience, we provide some code snippets to read in this data programmatically.
 
+### In Python
+
+Read in data for a single season
+
+```python
+import pandas as pd
+
+base_url = "https://raw.githubusercontent.com/dajmcdon/rvdss-canada/main/data/"
+one_season = "season_2024_2025/positive_tests.csv"
+positive_tests= pd.read_csv(base_url+one_season)
+```
+
+Read in data for all seasons, merge into a single dataframe
+```python
+
+import pandas as pd
+years = list(range(2013,2025))
+all_seasons = ["season_"+str(y)+"_"+str(y+1) for y in years]
+all_seasons = [pd.read_csv(base_url+season+"/positive_tests.csv") for season in all_seasons]
+all_seasons = [df.set_index(['epiweek', 'time_value', 'issue', 'geo_type', 'geo_value']) for df in all_seasons]
+
+positive_tests = pd.concat(all_seasons)
+```
+
 ### In R
 
 
