@@ -24,6 +24,8 @@ Read in data for all seasons, merge into a single dataframe
 ```python
 
 import pandas as pd
+
+base_url = "https://raw.githubusercontent.com/dajmcdon/rvdss-canada/main/data/"
 years = list(range(2013,2025))
 all_seasons = ["season_"+str(y)+"_"+str(y+1) for y in years]
 all_seasons = [pd.read_csv(base_url+season+"/positive_tests.csv") for season in all_seasons]
