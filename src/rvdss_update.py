@@ -44,8 +44,6 @@ def abbreviate_geo(full_name):
         abbrev =  "ns"
     elif "new brunswick" in lowercase:
         abbrev =  "nb"
-    elif "nova scotia" in lowercase:
-        abbrev =  "ns"     
     elif re.match('|'.join(("^québec$", "province of québec","quebec")),lowercase):
         abbrev = "qc"  
     elif re.match('|'.join(("^ontario$", "province of ontario")),lowercase):
