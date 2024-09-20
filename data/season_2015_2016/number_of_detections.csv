@@ -1,4 +1,4 @@
-epiweek,time_value,issue,geo_type,geo_value,hpiv_positive_tests,adv_positive_tests,hmpv_positive_tests,ev_rv_positive_tests,hcov_positive_tests,rsv_positive_tests
+epiweek,time_value,issue,geo_type,geo_value,hpiv_positive_tests,adv_positive_tests,hmpv_positive_tests,evrv_positive_tests,hcov_positive_tests,rsv_positive_tests
 201535,2015-09-05,2016-09-01,nation,ca,33,17,12,199,4,250
 201536,2015-09-12,2016-09-01,nation,ca,27,35,9,221,1,6
 201537,2015-09-19,2016-09-01,nation,ca,29,26,10,296,3,8

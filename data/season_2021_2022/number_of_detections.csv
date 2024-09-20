@@ -1,4 +1,4 @@
-epiweek,time_value,issue,geo_type,geo_value,hpiv_positive_tests,adv_positive_tests,hmpv_positive_tests,ev_rv_positive_tests,hcov_positive_tests,rsv_positive_tests,flu_positive_tests
+epiweek,time_value,issue,geo_type,geo_value,hpiv_positive_tests,adv_positive_tests,hmpv_positive_tests,evrv_positive_tests,hcov_positive_tests,rsv_positive_tests,flu_positive_tests
 202135,2021-09-04,2022-09-01,nation,ca,158,31,6,557,21,286,3
 202136,2021-09-11,2022-09-01,nation,ca,142,33,7,510,14,478,1
 202137,2021-09-18,2022-09-01,nation,ca,207,28,6,916,11,628,3
