@@ -30,7 +30,7 @@ For each season, there are 2 or 3 files:
 
     -   Not always available
 
-    -   Corresponds to figure 2, usually titled "Number of positive respiratory virus tests"
+    -   Corresponds to figure 2, usually titled "Number of positive respiratory virus tests..."
 
         -   eg. [Figure 2: Number of positive respiratory virus tests reported by participating laboratories in Canada by surveillance week](<https://www.canada.ca/en/public-health/services/surveillance/respiratory-virus-detections-canada/2021-2022/week-28-ending-july-16-2022.html#a4>)
 
