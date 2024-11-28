@@ -10,7 +10,7 @@ from unidecode import unidecode
 import string
 
 
-from src.constants import (
+from constants import (
         VIRUSES, GEOS, REGIONS, NATION,
         DASHBOARD_UPDATE_DATE_FILE, DASHBOARD_DATA_FILE, DASHBOARD_BASE_URL
     )
