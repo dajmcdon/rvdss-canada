@@ -4,6 +4,8 @@ This is a data repository for respiratory virus detections in Canada collected b
 
 The data was historically reported in weekly reports, but have moved to an interactive dashboard as of week 24 of the 2023-2024 season (week ending June 15, 2024). Historic reports and the interactive dashboard can be found [here](https://www.canada.ca/en/public-health/services/surveillance/respiratory-virus-detections-canada.html).
 
+IMPORTANT NOTE: "respiratory_detections.csv" was not tracking revisions correctly, so the epiweek and time_value columns were incorrect. The file has been fixed as of March 21st, 2025, but versions before this date have errors in them. The spelling of geo_values and column names has also changed to be consistent with previous seasons.
+
 ## Directory Structure
 
 For each season, there are 2 or 3 files:
@@ -32,7 +34,7 @@ For each season, there are 2 or 3 files:
 
     -   Corresponds to figure 2, usually titled "Number of positive respiratory virus tests..."
 
-        -   eg. [Figure 2: Number of positive respiratory virus tests reported by participating laboratories in Canada by surveillance week](<https://www.canada.ca/en/public-health/services/surveillance/respiratory-virus-detections-canada/2021-2022/week-28-ending-july-16-2022.html#a4>)
+        -   eg. [Figure 2: Number of positive respiratory virus tests reported by participating laboratories in Canada by surveillance week](https://www.canada.ca/en/public-health/services/surveillance/respiratory-virus-detections-canada/2021-2022/week-28-ending-july-16-2022.html#a4)
 
 -   positive_tests.csv
 
@@ -41,17 +43,14 @@ For each season, there are 2 or 3 files:
     -   Regional level (with national aggregation)
 
     -   Has revisions
-    
+
     -   Corresponds to figures 3-9, usually titles "Positive [virus] tests (%)..."
 
-    -   eg. [Figure 3: Positive influenza (Flu) tests (%) in Canada by region by surveillance week](<https://www.canada.ca/en/public-health/services/surveillance/respiratory-virus-detections-canada/2021-2022/week-28-ending-july-16-2022.html#a5>)
-        
+    -   eg. [Figure 3: Positive influenza (Flu) tests (%) in Canada by region by surveillance week](https://www.canada.ca/en/public-health/services/surveillance/respiratory-virus-detections-canada/2021-2022/week-28-ending-july-16-2022.html#a5)
 
-   
-        
 ## Column Names
 
--   epiweek: the epidemiological week, in the format of yearweek (eg. 201712 is the 12th epidemiological week of 2017). The list of epidemiological weeks for the current 2024-2025 season can be found [here](<https://www.canada.ca/en/public-health/services/diseases/flu-influenza/influenza-surveillance/fluwatch-weeks-calendar.html>)
+-   epiweek: the epidemiological week, in the format of yearweek (eg. 201712 is the 12th epidemiological week of 2017). The list of epidemiological weeks for the current 2024-2025 season can be found [here](https://www.canada.ca/en/public-health/services/diseases/flu-influenza/influenza-surveillance/fluwatch-weeks-calendar.html)
 
 -   time_value: the last day of the epiweek
 
