@@ -153,7 +153,7 @@ def preprocess_table_columns(table):
     table.columns = [re.sub(r"flu a","flua",t) for t in table.columns]
     table.columns = [re.sub(r"flu b","flub",t) for t in table.columns]
     table.columns = [re.sub(r"flutest\b","flu test", col) for col in table.columns]
-    table.columns = [re.sub(r"other hpiv|other_hpiv","hpivother",t) for t in table.columns]
+    table.columns = [re.sub(r"other hpiv|other_hpiv|hpiv_other","hpivother",t) for t in table.columns]
 
     table.columns=[re.sub(r'bpositive','b_positive',c) for c in table.columns]
     table.columns=[re.sub(r'apositive','a_positive',c) for c in table.columns]
