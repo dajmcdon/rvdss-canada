@@ -16,7 +16,7 @@ For each season, there are 2 or 3 files:
 
     -   Lab level (with regional aggregation)
 
-    -   No revisions
+    -   No revisions for historic tables, but starting with the 2024-2025 season revisions are available
 
     -   Corresponds to table 1, usually titled "Respiratory virus detections for the week ending..."
 
