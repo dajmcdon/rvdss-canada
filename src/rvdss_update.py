@@ -122,7 +122,15 @@ def get_dashboard_update_date(base_url,headers):
     # Get update date
     update_date_url =  base_url + "RVD_UpdateDate.csv"
     update_date_url_response = requests.get(update_date_url, headers=headers)
-    update_date = datetime.strptime(update_date_url_response.text,"%m/%d/%Y %H:%M:%S").strftime("%Y-%m-%d")
+    
+    pattern1= re.compile("[0-9]{4}-[0-9]{2}-[0-9]{2}")
+    pattern2= re.compile("[0-9]{2}/[0-9]{2}/[0-9]{4}")
+    
+    if pattern1.match(update_date_url_response.text):
+        update_date = datetime.strptime(update_date_url_response.text,"%Y-%m-%d %H:%M:%S").strftime("%Y-%m-%d")
+    elif pattern2.match(update_date_url_response.text):
+        update_date = datetime.strptime(update_date_url_response.text,"%m/%d/%Y %H:%M:%S").strftime("%Y-%m-%d")
+    
     return(update_date)
 
 def preprocess_table_columns(table):
