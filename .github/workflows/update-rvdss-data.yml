@@ -5,7 +5,7 @@ on:
   schedule:
     # Updates are ~3pm EDT (UTC-4 or UTC-5)
     # So 21:00 UTC for safety
-    - cron: '0 21 * * THU'
+    - cron: '0 21 * * FRI'
 
 
 jobs:
@@ -19,10 +19,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set up Python 3.8
+      - name: Set up Python 3.10
         uses: actions/setup-python@v5
         with:
-          python-version: '3.8'
+          python-version: '3.10'
       
       - name: Install Dependencies
         run: pip install -r requirements.txt
