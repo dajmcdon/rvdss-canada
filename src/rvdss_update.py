@@ -301,8 +301,8 @@ updated_data = fetch_dashboard_data(base_url)
 detection_data = updated_data["respiratory_detection"]
 positive_data = updated_data["positive"]
 
-path1 = './data/season_2024_2025/respiratory_detections.csv'
-path2 = './data/season_2024_2025/positive_tests.csv'
+path1 = './data/season_2025_2026/respiratory_detections.csv'
+path2 = './data/season_2025_2026/positive_tests.csv'
 
 if os.path.exists(path1)==False:
     detection_data.to_csv(path1,index=True)
