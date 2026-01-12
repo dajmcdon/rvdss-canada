@@ -214,6 +214,7 @@ def get_positive_data(base_url,headers,update_date):
     df = pd.read_csv(io.StringIO(url_response.text))
 
     df['virus'] = [abbreviate_virus(v) for v in df['virus']]
+    
     epiw =  df.apply(lambda x: Week(x['year'],x['week']),axis=1)
     df.insert(0,"epiweek",[int(str(w)) for w in epiw])
     df['epiweek'] = [int(str(w)) for w in df['epiweek']]
@@ -260,13 +261,17 @@ def get_detections_data(base_url,headers,update_date):
     detections_url_response.encoding='UTF-8'
     df_detections = pd.read_csv(io.StringIO(detections_url_response.text))
     
-    df_detections["year"] = [int(re.search(r"20\d{2}", w).group(0)) for w in  df_detections["date"]] 
-    ew = df_detections.apply(lambda x: Week(x['year'],x['week']),axis=1)
+    #df_detections["year"] = [int(re.search(r"20\d{2}", w).group(0)) for w in  df_detections["date"]] 
+    #ew = df_detections.apply(lambda x: Week(x['year'],x['week']),axis=1)
 
     # swap order of names from a_b to b_a
     df_detections = df_detections.rename(columns=lambda x: '_'.join(x.split('_')[1:]+x.split('_')[:1]))
-    df_detections.insert(0,"epiweek",[int(str(w)) for w in ew])
+    
+    #df_detections.insert(0,"epiweek",[int(str(w)) for w in ew])
+    df_detections["epiweek"] = [Week.fromdate(datetime.strptime(d,"%Y-%m-%d")) for d in df_detections["date"]]
+    df_detections["year"] = [e.year for e in df_detections["epiweek"]] 
     df_detections['epiweek'] = [int(str(w)) for w in df_detections['epiweek']]
+    
     df_detections.insert(2,"issue",update_date)
     
     df_detections=preprocess_table_columns(df_detections)
