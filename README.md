@@ -124,5 +124,5 @@ You can also convert this data to a more compact format using CMU Delphi Group's
 ``` r
 remotes::install_github("cmu-delphi/epiprocess")
 library(epiprocess)
-pt <- as_epi_archive(positive_tests, other_keys = "epiweek", compactify = TRUE) # ~ 3.3MB
+pt <- as_epi_archive(positive_tests, compactify = TRUE) # ~ 3.3MB
 ```
